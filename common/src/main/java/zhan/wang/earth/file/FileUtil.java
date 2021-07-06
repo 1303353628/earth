@@ -71,6 +71,10 @@ public class FileUtil {
                 for (File file:sourceFile.listFiles()) {
                     delDictionary(file);
                 }
+                if (sourceFile.listFiles().length == 0) {
+                    System.out.println(sourceFile.getAbsoluteFile());
+                    sourceFile.delete();
+                }
             }
         }
     }
